@@ -13,42 +13,30 @@
   font-style: normal; 
 }
 
-/* ____________________ mobile first - 480px ____________________ */
+@font-face{
+  font-family: 'Higlander'; 
+  src: url(../../polices/voice_of_the_highlander/Voice\ of\ the\ Highlander.ttf); 
+  font-weight: normal; 
+  font-style: normal; 
+}
 
-/* Général */
+/* ========================= mobile first - 480px ===========================*/
+
+/* --------------- Général --------------- */
 html{
   font-size: 100%; 
 }
 
 body{
   font-family: 'Raleway-Regular', Arial, Helvetica, sans-serif; 
+  margin: 0 auto; 
 }
 
-/* Figures */
-
-figure{
-  display: inline-block; 
-  position: relative; 
-}
-
-figcaption{
-  display: block; 
-  position: absolute;
-  bottom: 10px; 
-  left: 10px; 
-  padding: 10px 0; 
-  font-family: 'Raleway-Bold', Arial, Helvetica, sans-serif; 
-  text-align: center; 
-  color: white; 
-}
-
-img{
-  display: block;
-  width: 100%;  
+h1,h2,h3,h4{
+  margin: 0; 
 }
 
 /* Button */
-
 .button{
   width: 150px; 
   text-align: center;
@@ -56,17 +44,118 @@ img{
 
 .button a{
 display: block;
-background-color: #c6d99c;
-background: linear-gradient(180deg, #fff, #c6d99c);
-border: 1px solid #fff;
+background-color: #f75a3b;
 border-radius: 3px;
 text-decoration: none;
 color:#112726;
 padding: 5px 9px;
+transition: background-color 500ms ease-out, color 1s ease-out;
 }
 
 .button a:hover, nav a:focus, .actuel {
-  background-color: #ded77c;
-  background: linear-gradient(180deg, #e7e3a0, #ded77c);
+  background-color: black; 
+  color: white; 
 }
 
+/* ----------------- Header ------------------ */
+header{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  font-family: 'Higlander', cursive; 
+  color: white; 
+  padding: 10px; 
+  font-size: 2rem; 
+}
+header figure{
+  margin: 0; 
+  height: 100vh; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: -10; 
+}
+
+header figure img{
+  display: block; 
+  width: 100vw; 
+  height: 100vh; 
+}
+
+/* Burger */
+header div{
+  display: block; 
+  padding: 5% 3%; 
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 5%;
+}
+#burger-icon{
+  display: block;
+  height: 4px;
+  width: 35px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+#burger-icon::before, #burger-icon::after {
+  content:"";
+  display: block;
+  height: 4px;
+  width: 35px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: -12px;
+}
+#burger-icon::after {
+  top: 12px;
+}
+
+/* -------------- First article ---------------- */
+
+main article:first-of-type{
+  height: 90vh; 
+  padding: 3%; 
+}
+
+/* Figures */
+
+main article figure {
+  display: inline-block; 
+  position: relative; 
+}
+
+main article figure figcaption{
+  display: block; 
+  position: absolute;
+  bottom: 10px; 
+  left: 10px; 
+  padding: 10px 0; 
+  font-family: 'Raleway-Bold', Arial, Helvetica, sans-serif; 
+  font-size: 1.5rem; 
+  text-align: center; 
+  -webkit-text-stroke: 0.025em rgb(15, 7, 87); 
+  color: white; 
+}
+
+main article figure img{
+  display: block;
+  width: 100%;  
+}
+
+
+
+
+/* -------------- Footer --------------- */
+footer{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: black; 
+  color: white; 
+  text-align: center; 
+  height: 5vh; 
+}
+
+footer p{
+  margin: 0; 
+}
