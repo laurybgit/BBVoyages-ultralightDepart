@@ -1,0 +1,72 @@
+/* Font-face */
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('../../polices/raleway/Raleway-Regular.ttf') format('ttf'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Raleway-Bold'; 
+  src: url(../../polices/raleway/Raleway-Bold.ttf); 
+  font-weight: bold; 
+  font-style: normal; 
+}
+
+/* ____________________ mobile first - 480px ____________________ */
+
+/* Général */
+html{
+  font-size: 100%; 
+}
+
+body{
+  font-family: 'Raleway-Regular', Arial, Helvetica, sans-serif; 
+}
+
+/* Figures */
+
+figure{
+  display: inline-block; 
+  position: relative; 
+}
+
+figcaption{
+  display: block; 
+  position: absolute;
+  bottom: 10px; 
+  left: 10px; 
+  padding: 10px 0; 
+  font-family: 'Raleway-Bold', Arial, Helvetica, sans-serif; 
+  text-align: center; 
+  color: white; 
+}
+
+img{
+  display: block;
+  width: 100%;  
+}
+
+/* Button */
+
+.button{
+  width: 150px; 
+  text-align: center;
+}
+
+.button a{
+display: block;
+background-color: #c6d99c;
+background: linear-gradient(180deg, #fff, #c6d99c);
+border: 1px solid #fff;
+border-radius: 3px;
+text-decoration: none;
+color:#112726;
+padding: 5px 9px;
+}
+
+.button a:hover, nav a:focus, .actuel {
+  background-color: #ded77c;
+  background: linear-gradient(180deg, #e7e3a0, #ded77c);
+}
+
